@@ -8,37 +8,13 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import AppNavigator from './AppNavigator'
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.textButton}>Mudar de Tela</Text>
-        </TouchableOpacity>
-      </View>
+      <AppNavigator uriPrefix='/app' />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#669900',
-  },
-  button: {
-    width: '50%',
-    padding: 30,
-    backgroundColor: '#000000',
-  },
-  textButton: {
-    alignSelf: 'center',
-    fontWeight: 'bold',
-    fontSize: 25,
-    color: '#ffffff',
-  }
-});
